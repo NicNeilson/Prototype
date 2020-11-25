@@ -1,0 +1,288 @@
+/* Base Styles & Grid Setup
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+html {
+	scroll-behavior: smooth;
+}
+
+html, body, .grid-container { height: 100%; margin: 0; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 150px 1fr 200px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "nav nav nav header"
+    "main main main main"
+    "footer footer footer footer";
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "burger items items"
+    "burger items items";
+  grid-area: nav;
+  width: 100%;
+  height: 100%;
+}
+
+.burger { grid-area: burger; 
+  background: #D1EDF2;
+}
+
+.items { grid-area: items; 
+  background: #D1EDF2;
+}
+
+header { grid-area: header; 
+  background: #D1EDF2;
+}
+
+main { grid-area: main; 
+  background: #FFCCCB
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr;
+  grid-template-rows: 150px 125px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo-footer links sign-up"
+    "take-action social-media social-media";
+  grid-area: footer;
+}
+
+.logo-footer { grid-area: logo-footer; 
+  background: #D1EDF2;
+}
+
+.links { grid-area: links; 
+  background: #D1EDF2;
+}
+
+.sign-up { grid-area: sign-up; 
+  background: #D1EDF2;
+}
+
+.take-action { grid-area: take-action; 
+  background: #D1EDF2;
+}
+.social-media { grid-area: social-media; 
+  background: #D1EDF2;
+}
+
+/* Burger Stacker
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.burger .burger_stacker{
+  width: 85px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+}
+
+.burger .burgerlong {
+  width: 85px;
+  height: 8px;
+  background-color: black;
+  margin: 6px 0;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.burger .burgershort {
+  width: 65px;
+  height: 8px;
+  background-color: black;
+  margin: 6px 0;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+/* Nav Item List
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.items li {
+  display: inline-block;
+  list-style-type: none;
+  text-align: center;
+  margin-left: 100px;
+  padding-top: 50px;
+}
+
+.items li a {
+  display: inline-block;
+  color: #111;
+  text-align: center;
+  text-decoration: none;
+}
+
+.items li a:hover {
+  color: white;
+}
+
+/* Header Logo
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5.2% 0;
+}
+
+/* Header Logo
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+img {
+  object-fit: scale-down;
+}
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.logo-footer {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5.2% 0;
+}
+
+.links ul {
+  display: flex;
+  text-align: center;
+  margin: 0;
+  padding: 54px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+
+}
+
+.links li {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.links li a {
+  color: #111;
+  text-align: center;
+  text-decoration: none;
+}
+
+.links li a:hover {
+  color: white;
+}
+
+/* Fabrizio Van Marciano. (2019). 6 Simple CTA Button Styles With Hover Effects For Your Website. 
+Retrieved from: https://www.fabriziovanmarciano.com/button-styles/?cn-reloaded=1 */
+
+.CTAbutton {
+display: flex;
+border: none;
+background: #2EB1AB;
+color: #ffffff;
+font-weight: 100;
+padding: 20px;
+text-transform: uppercase;
+text-decoration: none;
+border-radius: 6px;
+transition: all 0.3s ease 0s;
+text-align: center;
+}
+
+.CTAbutton:hover {
+color: #B1E1DF;
+font-weight: 700;
+letter-spacing: 3px;
+background: none;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.3s ease 0s;
+}
+
+/* Footer Sign Up
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  height: auto;
+  margin: 0 auto;
+  padding: 40px;
+  padding-left: auto;
+  padding-right: auto;
+  position: relative;
+  text-align: center;
+}
+
+input[type=text], input[type=password] {
+  width: 30%;
+  padding: 5px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+  border-radius: 10px;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-color: #2EB1AB;
+  color: white;
+  padding: 5px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 60.5%;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+.registerbtn:hover {
+  opacity: 0.6;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+/* Responsive Design
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 460px) {
+  .grid-container {
+    display: block;
+  }
+
+header,
+nav,
+aside,
+main,
+footer {
+  width: 100%;
+  min-height: 200px;
+}
