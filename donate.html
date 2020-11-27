@@ -28,7 +28,7 @@
     <div class="grid-container">
 
       <header>
-        <img src="Take3-Logo.png" alt="logo" class="logo" width="150" height="150">
+        <img src="Images/Take3-Logo.png" alt="logo" class="logo" width="150" height="150">
       </header>
 
       <nav>
@@ -56,9 +56,32 @@
           <button>DONATE</button>
           <h1>Donate</h1>
         </div>
-        <img class = "PlasticCollection" src="Plastic GPGP Collection.jpg" alt="Plastic GPGP Collection">
-        <div>
-
+        <img class = "PlasticCollection" src="Images/Plastic GPGP Collection.jpg" alt="Plastic GPGP Collection">
+        <div class="container">
+          <div style="text-align:center">
+            <h2>Sign Up</h2>
+            <p>Sign Up to participate in the cleanup, or donate today.</p>
+          </div>
+          <div class="row">
+            <div class="column">
+              <img src="Images/isldclean.png" style="width:100%">
+            </div>
+            <div class="column">
+              <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                  <option value="australia">Australia</option>
+                </select>
+                <label for="subject">Your Involvement</label>
+                <textarea id="subject" name="subject" placeholder="Let us know how you want to get involved..." style="height:170px"></textarea>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </div>
         </div>
       </main>
 
@@ -66,7 +89,7 @@
 
       <footer>
         <div class="logo-footer">
-          <img src="Take3-Logo.png" alt="logo" class="img-logo-footer" width="110" height="110">
+          <img src="Images/Take3-Logo.png" alt="logo" class="img-logo-footer" width="110" height="110">
         </div>
         <div class="links">
           <ul>
@@ -79,9 +102,9 @@
         </div>
         <div class="sign-up">
           <form>
-            <div class = "container">
-              <input type="text" placeholder="Email" name="email" id="email" required>
-              <input type="password" placeholder="Password" name="psw" id="psw" required>
+            <div class = "footer-container">
+              <input type="text" placeholder="Email" name="email" id="email"  style="width=50%" required>
+              <input type="text" placeholder="Name" name="name" id="nme" required>
               <button type="submit" class="registerbtn">Register</button>
             </div>
           </form>
